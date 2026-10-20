@@ -1,4 +1,4 @@
-export const add = (a, b) => a + b;
+export const add = (a, b) => a - b;
 
 export const divide = (a, b) => {
   if (b === 0) throw new Error('หารด้วยศูนย์ไม่ได้');
