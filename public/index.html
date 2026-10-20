@@ -4,9 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello GitHub Actions</title>
+  <meta name="color-scheme" content="light">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #24334b; background: #f3f5f8; font-family: "Leelawadee UI", Tahoma, sans-serif; line-height: 1.7; }
+    header { background: #142b49; color: white; border-top: 4px solid #b99a5b; }
+    .brand { max-width: 1120px; margin: auto; padding: 22px 32px; display: flex; align-items: center; gap: 14px; }
+    .mark { border: 1px solid #71819a; border-radius: 10px; width: 44px; height: 44px; display: grid; place-items: center; font-weight: bold; }
+    .brand strong { display: block; font-size: 17px; }
+    .brand small { color: #c2cddd; font-size: 11px; letter-spacing: .12em; }
+    main { max-width: 1120px; margin: auto; padding: 44px 32px; }
+    .eyebrow { margin: 0 0 12px; color: #63738a; font-size: 12px; letter-spacing: .12em; font-weight: bold; }
+    .hero { background: white; border: 1px solid #dce3ec; border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: 1.3fr 1fr; }
+    .hero-copy { padding: 42px; }
+    h1 { margin: 0 0 16px; color: #142b49; font-size: clamp(28px, 4vw, 42px); line-height: 1.35; overflow-wrap: anywhere; }
+    .lead { color: #63738a; margin: 0 0 26px; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; }
+    a { color: #244f7c; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #b99a5b; outline-offset: 4px; }
+    .button { padding: 11px 18px; border-radius: 7px; border: 1px solid #dce3ec; text-decoration: none; font-size: 14px; font-weight: 600; }
+    .primary { background: #142b49; color: white; border-color: #142b49; }
+    .button:hover { background: #e9eef5; color: #142b49; }
+    .process { background: #192f4b; color: white; padding: 34px; display: flex; flex-direction: column; justify-content: center; }
+    .process h2 { margin: 0 0 20px; color: #c8d4e3; font-size: 12px; letter-spacing: .1em; }
+    .process ol { margin: 0; padding-left: 24px; }
+    .process li { padding: 9px 0 12px 8px; }
+    .process li::marker { color: #d5bb83; font-weight: bold; }
+    .process strong { display: block; font-size: 15px; }
+    .process span { font-size: 12px; color: #c2cddd; }
+    .section-title { margin: 34px 0 16px; font-size: 20px; color: #142b49; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    article { padding: 25px; background: white; border: 1px solid #dce3ec; border-top: 3px solid #b99a5b; border-radius: 9px; }
+    .number { color: #8b7549; font-size: 12px; font-weight: bold; letter-spacing: .08em; }
+    h3 { margin: 10px 0; font-size: 17px; color: #142b49; }
+    article p { color: #63738a; font-size: 14px; margin: 0; }
+    .note { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 24px; padding: 20px 24px; border: 1px solid #dce3ec; border-radius: 8px; font-size: 13px; }
+    .note span { color: #63738a; }
+    footer { margin-top: 28px; font-size: 12px; color: #63738a; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    @media(max-width: 760px) { .brand { padding: 18px; } main { padding: 28px 18px; } .hero { grid-template-columns: 1fr; } .hero-copy { padding: 26px; } .process { padding: 26px; } .features { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
+  <header><div class="brand"><span class="mark" aria-hidden="true">GH</span><div><strong>โครงการพัฒนาซอฟต์แวร์</strong><small>JAVASCRIPT · GITHUB ACTIONS</small></div></div></header>
+  <main>
+  <p class="eyebrow">โครงงานการเรียนรู้ / HELLO ACTIONS</p>
+  <section class="hero" aria-label="แนะนำโครงการ">
+  <div class="hero-copy">
   <h1>Hello GitHub Actions</h1>
-  <p>เว็บฝึก CI/CD ด้วย JavaScript และ GitHub Pages</p>
+  <p class="lead">โครงงานฝึกพัฒนาและเผยแพร่เว็บไซต์ด้วย JavaScript ตั้งแต่การเขียน tests ไปจนถึงการนำเว็บไซต์ขึ้นใช้งานผ่าน GitHub Pages</p>
+  <div class="links">
+  <a class="button primary" href="https://github.com/67160170-commits/hello-actions">ดูซอร์สโค้ดบน GitHub ↗</a>
+  <a class="button" href="https://github.com/67160170-commits/hello-actions/actions">ดูผลการตรวจสอบ ↗</a>
+  </div></div>
+  <div class="process"><h2>กระบวนการเผยแพร่เว็บไซต์</h2><ol>
+  <li><strong>ส่งการเปลี่ยนแปลง</strong><span>พัฒนาโค้ดและเปิด Pull Request</span></li>
+  <li><strong>ตรวจสอบอัตโนมัติ</strong><span>รัน tests บน Node.js 22 และ 24</span></li>
+  <li><strong>เผยแพร่หลังผ่านการตรวจสอบ</strong><span>Merge เข้า main แล้วอัปเดต GitHub Pages</span></li>
+  </ol></div>
+  </section>
+  <h2 class="section-title">องค์ประกอบของโครงการ</h2>
+  <section class="features" aria-label="รายละเอียดโครงการ">
+  <article><span class="number">01 / TESTING</span><h3>ทดสอบการทำงาน</h3><p>ตรวจสอบฟังก์ชันคำนวณ การเรียงข้อมูล การทำงานแบบ async และการตรวจจำนวนเฉพาะ</p></article>
+  <article><span class="number">02 / QUALITY</span><h3>ควบคุมคุณภาพโค้ด</h3><p>กำหนด coverage ขั้นต่ำ 80% และตรวจสอบหลายเวอร์ชันก่อนอนุญาตให้รวมโค้ด</p></article>
+  <article><span class="number">03 / DELIVERY</span><h3>เผยแพร่อย่างเป็นระบบ</h3><p>ใช้ GitHub Actions เผยแพร่เว็บไซต์ พร้อมแยกค่าตั้งค่าและข้อมูลลับออกจากซอร์สโค้ด</p></article>
+  </section>
+  <aside class="note"><strong>โปรเจกต์ประกอบการเรียนรู้ CI/CD</strong><span>JavaScript · Node.js · GitHub Pages</span></aside>
+  <footer><span>Hello Actions · 67160170-commits</span><span>เรียนรู้ พัฒนา และตรวจสอบอย่างต่อเนื่อง</span></footer>
+  </main>
 </body>
 </html>
