@@ -1,0 +1,15 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { add } from '../math.js';
+
+test('adds two positive numbers', () => {
+  assert.equal(add(1, 2), 3);
+});
+
+test('adds negative numbers', () => {
+  assert.equal(add(-2, -3), -5);
+});
+
+test('adding zero preserves the number', () => {
+  assert.equal(add(7, 0), 7);
+});
